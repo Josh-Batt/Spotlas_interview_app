@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'user_model.dart';
+import 'api_service.dart';
 
 class FeedPage extends StatefulWidget {
   const FeedPage({Key? key}) : super(key: key);
@@ -8,6 +10,19 @@ class FeedPage extends StatefulWidget {
 }
 
 class FeedPageState extends State<FeedPage> {
+  late List<UserModel>? _userModel = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _getData();
+  }
+
+  void _getData() async {
+    _userModel = (await ApiService().getUsers())!;
+    Future.delayed(const Duration(seconds: 1)).then((value) => setState(() {}));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
