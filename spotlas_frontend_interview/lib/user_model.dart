@@ -2,18 +2,11 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:meta/meta.dart';
 
-// final welcome = welcomeFromJson(jsonString);
-// Welcome welcomeFromJson(String str) => Welcome.fromJson(json.decode(str));
-
-// String welcomeToJson(Welcome data) => json.encode(data.toJson());
-
-// ----- HIS STARTING CODE -----
 List<UserModel> userModelFromJson(String str) =>
     List<UserModel>.from(json.decode(str).map((x) => UserModel.fromJson(x)));
 
 String userModelToJson(List<UserModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-// ----- HIS STARTING CODE END -----
 
 class UserModel {
   UserModel({
@@ -31,7 +24,7 @@ class UserModel {
     required this.url,
   });
 
-  String id;
+  String? id;
   Caption caption;
   List<Media> media;
   DateTime createdAt;
@@ -42,7 +35,7 @@ class UserModel {
   List<Author>? likedBy;
   int numberOfLikes;
   dynamic tags;
-  String url;
+  String? url;
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
         id: json["id"],
