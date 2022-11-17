@@ -24,112 +24,117 @@ class FeedPageState extends State<FeedPage> {
       body: Center(
         child: ListView(
           children: [
-            Container(
-              height: 500,
-              child: Stack(
-                children: <Widget>[
-                  Expanded(
-                    child: Container(
-                      // TODO: link to API post pictures
-                      child: Image.asset(
-                        'assets/images/template_insta_post.png',
-                        fit: BoxFit.contain,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  height: 500,
+                  child: Stack(
+                    children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          // TODO: link to API post pictures
+                          child: Image.asset(
+                            'assets/images/template_insta_post.png',
+                            fit: BoxFit.contain,
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Positioned(
-                    top: 15,
-                    left: 25,
-                    child: Row(
-                      children: [
-                        const CircleAvatar(
-                          // TODO: link to API user pictures
-                          radius: 25,
-                          backgroundColor: Colors.pink,
-                          child: CircleAvatar(
-                            backgroundImage: AssetImage(
-                              'assets/images/Circle_(transparent).png',
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                      Positioned(
+                        top: 15,
+                        left: 25,
+                        child: Row(
                           children: [
-                            Container(
-                              alignment: const Alignment(-0.5, -0.5),
-                              child: const Text(
-                                'users handle',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 20,
+                            const CircleAvatar(
+                              // TODO: link to API user pictures
+                              radius: 25,
+                              backgroundColor: Colors.pink,
+                              child: CircleAvatar(
+                                backgroundImage: AssetImage(
+                                  'assets/images/Circle_(transparent).png',
                                 ),
                               ),
                             ),
-                            Container(
-                              alignment: const Alignment(-0.5, -0.5),
-                              child: const Text(
-                                'users name',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
+                            const SizedBox(
+                              width: 15,
                             ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  Positioned(
-                    top: 290,
-                    left: 25,
-                    child: Row(
-                      children: [
-                        const CircleAvatar(
-                          // TODO: link to API company pictures
-                          radius: 25,
-                          backgroundColor: Colors.white,
-                          child: CircleAvatar(
-                            backgroundImage:
-                                AssetImage('assets/images/snake-on-circle.png'),
-                          ),
-                        ),
-                        const SizedBox(
-                          width: 15,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              alignment: const Alignment(-0.5, -0.5),
-                              child: const Text(
-                                'company handle',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 20,
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  alignment: const Alignment(-0.5, -0.5),
+                                  child: const Text(
+                                    'users handle',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 20,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
-                            Container(
-                              alignment: const Alignment(-0.5, -0.5),
-                              child: const Text(
-                                'company name',
-                                style: TextStyle(
-                                  color: Colors.white,
+                                Container(
+                                  alignment: const Alignment(-0.5, -0.5),
+                                  child: const Text(
+                                    'users name',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ),
+                              ],
+                            )
                           ],
                         ),
-                      ],
-                    ),
+                      ),
+                      Positioned(
+                        top: 290,
+                        left: 25,
+                        child: Row(
+                          children: [
+                            const CircleAvatar(
+                              // TODO: link to API company pictures
+                              radius: 25,
+                              backgroundColor: Colors.white,
+                              child: CircleAvatar(
+                                backgroundImage: AssetImage(
+                                    'assets/images/snake-on-circle.png'),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 15,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  alignment: const Alignment(-0.5, -0.5),
+                                  child: const Text(
+                                    'company handle',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  alignment: const Alignment(-0.5, -0.5),
+                                  child: const Text(
+                                    'company name',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -185,14 +190,85 @@ class FeedPageState extends State<FeedPage> {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
-                  height: 50,
-                  width: 100,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    color: Colors.black,
-                  ),
+                // const SizedBox(
+                //   width: 25,
+                // ),
+                Stack(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        color: Colors.white,
+                        border: Border.all(color: Colors.black),
+                      ),
+                    ),
+                    Positioned(
+                      top: 15,
+                      left: 20,
+                      child: Text(
+                        'Outdoors',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        color: Colors.white,
+                        border: Border.all(color: Colors.black),
+                      ),
+                    ),
+                    Positioned(
+                      top: 15,
+                      left: 20,
+                      child: Text(
+                        'Outdoors',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        color: Colors.white,
+                        border: Border.all(color: Colors.black),
+                      ),
+                    ),
+                    Positioned(
+                      top: 15,
+                      left: 20,
+                      child: Text(
+                        'Outdoors',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
