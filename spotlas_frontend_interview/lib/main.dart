@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'feed_page.dart';
+import 'package:spotlas_frontend_interview/views/endpoint_testing.dart';
+import 'views/feed_page.dart';
+import 'views/endpoint_testing.dart';
+import 'views/feed_page_v2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,9 +23,11 @@ class MyApp extends StatelessWidget {
             elevation: 0,
           ),
         ),
-        initialRoute: FeedPage.id,
+        initialRoute: FeedPageV2.id,
         routes: {
           FeedPage.id: (context) => FeedPage(),
+          TestingPage.id: (context) => TestingPage(),
+          FeedPageV2.id: (context) => FeedPageV2(),
         });
   }
 }

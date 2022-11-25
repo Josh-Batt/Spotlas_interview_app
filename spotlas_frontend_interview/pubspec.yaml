@@ -33,6 +33,9 @@ flutter:
     - assets/images/real_imgs/not-saved.png
     - assets/images/real_imgs/saved.png
     - assets/images/real_imgs/send.png
+    - assets/images/test_foods/test-dish1.jpg
+    - assets/images/test_foods/test-dish2.jpg
+    - assets/images/test_foods/test-dish3.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
