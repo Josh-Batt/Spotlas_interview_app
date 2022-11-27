@@ -38,6 +38,26 @@ class _FeedPageV2State extends State<FeedPageV2> {
     );
   }
 
+  Widget _tags() {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+          shadowColor: MaterialStateProperty.all<Color>(Colors.black),
+        ),
+        child: const Text(
+          'tag',
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _post1() {
     return Column(
       children: <Widget>[
@@ -180,6 +200,28 @@ class _FeedPageV2State extends State<FeedPageV2> {
                   text:
                       'post asdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
                 ),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Container(
+          margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+          alignment: AlignmentDirectional.topStart,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: <Widget>[
+                _tags(),
+                _tags(),
+                _tags(),
+                _tags(),
+                _tags(),
+                _tags(),
+                _tags(),
+                _tags(),
               ],
             ),
           ),
@@ -353,6 +395,25 @@ class _FeedPageV2State extends State<FeedPageV2> {
           height: 20,
         ),
         Container(
+          margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+          alignment: AlignmentDirectional.topStart,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: <Widget>[
+                _tags(),
+                _tags(),
+                _tags(),
+                _tags(),
+                _tags(),
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Container(
           alignment: AlignmentDirectional.topStart,
           margin: const EdgeInsets.fromLTRB(20, 0, 20, 0),
           child: const Text(
@@ -516,6 +577,19 @@ class _FeedPageV2State extends State<FeedPageV2> {
         ),
         const SizedBox(
           height: 20,
+        ),
+        Container(
+          margin: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+          alignment: AlignmentDirectional.topStart,
+          child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: <Widget>[
+                  _tags(),
+                  _tags(),
+                  _tags(),
+                ],
+              )),
         ),
         Container(
           alignment: AlignmentDirectional.topStart,
