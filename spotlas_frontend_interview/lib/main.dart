@@ -3,6 +3,7 @@ import 'package:spotlas_frontend_interview/views/endpoint_testing.dart';
 import 'views/feed_page.dart';
 import 'views/endpoint_testing.dart';
 import 'views/feed_page_v2.dart';
+import 'views/carousel_slider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
           FeedPage.id: (context) => FeedPage(),
           TestingPage.id: (context) => TestingPage(),
           FeedPageV2.id: (context) => FeedPageV2(),
+          CarouselSliderTest.id: (context) => CarouselSliderTest(),
         });
   }
 }

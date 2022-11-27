@@ -1,6 +1,11 @@
-//import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+final List<String> imgList = [
+  'assets/images/test_foods/test-dish1.jpg',
+  'assets/images/test_foods/test-dish1 - 2.jpg',
+  'assets/images/test_foods/test-dish1 - 3.jpg',
+];
 
 class FeedPageV2 extends StatefulWidget {
   const FeedPageV2({super.key});
@@ -58,15 +63,32 @@ class _FeedPageV2State extends State<FeedPageV2> {
     );
   }
 
+  Widget _imgcarousel() {
+    return CarouselSlider.builder(
+      itemCount: imgList.length,
+      options: CarouselOptions(
+        initialPage: 0,
+        autoPlay: false,
+        viewportFraction: 1,
+        height: 500,
+        enableInfiniteScroll: false,
+        enlargeCenterPage: false,
+      ),
+      itemBuilder: (context, index, realIdx) {
+        return Image.asset(
+          imgList[index],
+          fit: BoxFit.cover,
+        );
+      },
+    );
+  }
+
   Widget _post1() {
     return Column(
       children: <Widget>[
         Stack(
           children: <Widget>[
-            Image.asset(
-              postImg1,
-              fit: BoxFit.cover,
-            ),
+            _imgcarousel(),
             const Positioned(
               top: 20,
               left: 20,

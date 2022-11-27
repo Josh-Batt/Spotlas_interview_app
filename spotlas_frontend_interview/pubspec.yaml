@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   http: ^0.13.4
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +37,8 @@ flutter:
     - assets/images/test_foods/test-dish1.jpg
     - assets/images/test_foods/test-dish2.jpg
     - assets/images/test_foods/test-dish3.jpg
+    - assets/images/test_foods/test-dish1 - 2.jpg
+    - assets/images/test_foods/test-dish1 - 3.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
